@@ -14,8 +14,6 @@ $ ./memsqlctl-go show-leaves
 
 ## set-license
 ```
-# not a real license
-
 $ ./memsqlctl-go set-license --license <base-64 encoded license>
 Set license to <base-64 encoded license>
 ```
@@ -45,6 +43,6 @@ Requirements:
 
 Steps:
 
-1. `git clone <this repo's git URL>`
+1. `git clone <this repo's git URL>` in your $GOPATH/src
 2. `cd memsqlctl-go`
 3. `go build -o memsqlctl-go` (or `go get`)

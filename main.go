@@ -157,6 +157,21 @@ func main() {
 		return
 	}
 
+	var commandFound bool
+
+	for _, c := range commands {
+		if c == os.Args[1] {
+			commandFound = true
+			break
+		}
+	}
+
+	if !commandFound {
+		fmt.Printf("Unknown command: %v\n", os.Args[1])
+		fmt.Printf("Available subcommands: %v\n", commands)
+		return
+	}
+
 	memSql, err := NewMemSql()
 
 	if err != nil {
